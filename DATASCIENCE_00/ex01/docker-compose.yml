@@ -11,3 +11,11 @@ services:
     #   - ./postgres-data:/var/lib/postgresql/data
     env_file:
       - ../.env
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-docker
+    restart: always
+    ports:
+      - 5050:80
+    env_file:
+      - ../.env
